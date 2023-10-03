@@ -21,8 +21,8 @@ function Cart() {
     return (
         <div>
             <Header />
-            <div className="container mx-auto flex gap-6 h-screen my-12">
-                <div className="w-1/2 p-6 border rounded">
+            <div className="container mx-auto px-4 sm:px-2 flex flex-wrap md:flex-nowrap gap-6 min-h-screen my-12">
+                <div className="w-full md:w-1/2 p-6 border rounded">
                     {
                         basketContext.basket?.length ? (
                             <>
@@ -58,7 +58,7 @@ function Cart() {
                     <button onClick={() => basketContext.removeAllProduct()}
                         className="px-4 py-2 rounded hover:bg-orange-300 bg-white text-slate-900 border border-orange-300 text-xs float-right">Clear Bag</button>
                 </div>
-                <div className="w-1/2 p-6 border rounded flex justify-center pt-12">
+                <div className="w-full md:w-1/2 p-6 border rounded flex justify-center pt-12">
                     <div>
                         <p className="px-3 py-2 md:py-3 md:px-4 block w-full md:w-[18rem]
                         xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:text-gray-600

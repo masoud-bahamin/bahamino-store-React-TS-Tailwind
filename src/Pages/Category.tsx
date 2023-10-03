@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Loader from "../components/Loader/Loader";
 import { MainCard } from "../components/Cards/MainCard";
 import { useFetch } from "../Hooks/useFetch";
+import Footer from "../components/Footer/Footer";
 
 function Category() {
 
@@ -16,7 +17,7 @@ function Category() {
             <Header />
             {/* First baner */}
             <div className="bg-[url(./img/baner.webp)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
-                <div className="container mx-auto">
+                <div className="container mx-auto px-4 sm:px-2">
                     <h2 className="text-4xl mb-6">Drowing Room</h2>
                     <h3 className="text-8xl bg-orange-300 p-2 mb-6 w-fit">Inoterior</h3>
                     <div className="flex items-center gap-3 mb-6">
@@ -31,14 +32,14 @@ function Category() {
                 </div>
             </div>
             {/* cards */}
-            <div className="container mx-auto py-8">
+            <div className="container mx-auto px-4 sm:px-2 py-8">
                 <h2 className="my-8 text-4xl">Category / {categoryId}</h2>
                 {loading && error ? (
                     <div className="bg-slate-300 h-screen flex justify-center items-center">
                         <Loader />
                     </div>
                 ) : (
-                    <div className=" grid grid-cols-4 gap-6">
+                    <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                         {data?.products!.map(product => (
                             <MainCard key={product.id}  {...product} />
                         ))}
@@ -46,6 +47,7 @@ function Category() {
                 )}
 
             </div>
+            <Footer />
         </div>
     )
 }

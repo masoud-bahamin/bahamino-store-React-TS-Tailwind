@@ -66,9 +66,9 @@ function Login() {
                     >{({ errors, touched }) => (
                         <Form >
                             {errors.email && touched.email ? (<div className="border border-rose-400 text-xs w-fit p-2 mb-2 rounded text-rose-400">{errors.email}</div>) : <></>}
-                            <Field name="email" type="text" className="w-96 block p-3 rounded mb-4 bg-slate-100 outline-orange-400" placeholder="Email Or Username : " />
+                            <Field name="email" type="text" className="w-72 sm:w-96 block p-3 rounded mb-4 bg-slate-100 outline-orange-400" placeholder="Email Or Username : " />
                             {errors.password && touched.password ? (<div className="border border-rose-400 text-xs w-fit p-2 mb-2 rounded text-rose-400">{errors.password}</div>) : <></>}
-                            <Field name="password" type="password" className="w-96 block p-3 rounded mb-6 bg-slate-100 outline-orange-400" placeholder="Password : " />
+                            <Field name="password" type="password" className="w-72 sm:w-96 block p-3 rounded mb-6 bg-slate-100 outline-orange-400" placeholder="Password : " />
                             <div className="mb-6 flex justify-between">
                                 <div>
                                     <input type="checkbox" name="" id="" className="mr-2" />

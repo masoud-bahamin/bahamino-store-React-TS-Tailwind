@@ -101,7 +101,7 @@ const FormWizard = () => {
     }
 
     return (
-        <div className="container mx-auto py-10">
+        <div className="container mx-auto px-4 sm:px-2 py-10">
             <div>
                 <div className="grid gap-5 grid-cols-12 relative">
                     <div className="lg:col-span-3 col-span-12">
