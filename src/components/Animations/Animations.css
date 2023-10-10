@@ -1,0 +1,9 @@
+.animation-container{
+    transform: translateX(2200px);
+    transition: all 1s ease-in;
+}
+
+
+.animation-container.animated{
+    transform:  translateX(0px);
+}

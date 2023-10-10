@@ -3,6 +3,7 @@ import Header from "../components/Header/Header"
 import { Link } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
 import { useFetch } from "../Hooks/useFetch"
+import AnimationDiv from "../components/Animations/AnimationDiv"
 
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
         <div>
             <Header />
             {/* First baner */}
+            <AnimationDiv position="left">
             <div className="bg-[url(./img/baner.webp)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
                 <div className="container mx-auto px-4 sm:px-2">
                     <h2 className="text-3xl md:text-4xl mb-6">Drowing Room</h2>
@@ -28,6 +30,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            </AnimationDiv>
             {/* categori Icon */}
             <div className="container mx-auto px-4 sm:px-2 py-8 xl:px-32">
                 <div className="grid grid-cols-4  md:grid-cols-8 lg:grid-cols-8 ">
@@ -115,13 +118,30 @@ function Home() {
                  </div>
                 ) : (
                     <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                        {data?.products?.map(product => (
-                            <MainCard key={product.id}  {...product} />
+                        {data?.products?.map((product , i) => (
+                           <AnimationDiv position={i%2 === 0 ? "left" : "right"} key={product.id}><MainCard   {...product} /></AnimationDiv>
                         ))}
                     </div>
                 )}
 
             </div>
+            <AnimationDiv position="right">
+            <div className="bg-[url(./img/b2.jpg)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
+                <div className="container mx-auto px-4 sm:px-2 ">
+                    <h2 className="text-3xl md:text-4xl mb-6">Ofice Room</h2>
+                    <h3 className="text-6xl md:text-8xl bg-orange-300 p-2 mb-6 w-fit">Laptops</h3>
+                    <div className="flex items-center gap-3 mb-6">
+                        <p className="bg-black -rotate-90 p-2">UP TO</p>
+                        <p className="text-6xl md:text-8xl">40%</p>
+                        <p>Off <br /> Everything</p>
+                    </div>
+                    <div className="flex gap-2">
+                        <button className="px-4 py-2 bg-orange-300 hover:bg-yellow-600 rounded">ADD TO CART</button>
+                        <button className="px-4 py-2 rounded hover:bg-orange-300 bg-white text-slate-900">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+            </AnimationDiv>
             <Footer />
         </div>
     )

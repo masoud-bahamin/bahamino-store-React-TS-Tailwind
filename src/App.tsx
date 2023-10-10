@@ -12,7 +12,7 @@ function App() {
   return (
     <UserContextProvaider>
       <ProductContextProvider>
-        <div className=' bg-orange-50'>
+        <div className=' bg-orange-50 overflow-x-hidden'>
           {router}
         </div>
       </ProductContextProvider>
