@@ -4,11 +4,23 @@ import { Link } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
 import { useFetch } from "../Hooks/useFetch"
 import AnimationDiv from "../components/Animations/AnimationDiv"
+import Swal from "sweetalert2"
 
 
 function Home() {
 
     const { data, error, loading } = useFetch('products')
+
+    if(error){
+       Swal.fire({
+        title:error,
+        text:"please try again",
+        showConfirmButton: true
+       }).then(res => {
+        if(res) window.location.reload()
+       })
+       
+    } 
 
     return (
         <div>

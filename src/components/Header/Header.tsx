@@ -1,15 +1,14 @@
 import { useState, useEffect, memo, useContext } from "react"
-import SearchModal from "../Modals/SearchModal"
 import Topbar from "./Topbar"
 import { NavLink } from "react-router-dom"
 import { productContext } from "../../Contexts/ProductContext";
 import CartBox from "../Cards/CartBox";
 import { userContext } from "../../Contexts/userContext";
+import SearcBox from "../SearchBox/SearcBox";
 
 
 function Header() {
-    const [activeDialog, setActiveDialog] = useState(false);
-    const [searchValue, setSearchValue] = useState<string>("")
+
     const [totalPrice, setTotalPrice] = useState(0)
     const [isShowMenu , setIsShowMenu] = useState(false)
 
@@ -21,11 +20,6 @@ function Header() {
         setTotalPrice(basketContext.basket.reduce((prev, cur) => { return prev + cur.price }, 0))
     }, [basketContext])
 
-    useEffect(() => {
-        if (searchValue.length > 1) {
-            setActiveDialog(true)
-        }
-    }, [searchValue])
 
     return (
         <>
@@ -45,11 +39,7 @@ function Header() {
                             <button className="ml-auto" onClick={() => setIsShowMenu(false)}>X</button>
                         </div>
                         <div>
-                            <div className="relative">
-                                <SearchModal text={searchValue} activeDialog={activeDialog} setActiveDialog={setActiveDialog} />
-                                <input onChange={e => setSearchValue(e.currentTarget.value)} value={searchValue}
-                                    className="w-full rounded hover:shadow-lg focus:shadow-lg focus:outline-0 px-2.5 py-2 border pl-10" type="text" placeholder="Search..." />
-                            </div>
+                            <SearcBox />
                         </div>
                         <nav className="lg:ml-auto">
                             <div className="inline-flex" id="main_menu">

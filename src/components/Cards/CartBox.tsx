@@ -1,10 +1,12 @@
 import { memo, useContext } from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { productContext } from "../../Contexts/ProductContext";
 
 const CartBox = ({ title, price, thumbnail, id }: ProductType) => {
 
     const context = useContext(productContext)
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -17,11 +19,11 @@ const CartBox = ({ title, price, thumbnail, id }: ProductType) => {
                         alt="card image"
                     />
                 </div>
-                <Link to={`/product/${id}`}>
+                <div onClick={() => navigate(`/product/${id}`)}>
                     <h5 className="text-primary font-medium text-sm">
                         {title}
                     </h5>
-                </Link>
+                </div>
                 <small className="text-xs font-light text-primary line-clamp-1">
                     ${price}
                 </small>

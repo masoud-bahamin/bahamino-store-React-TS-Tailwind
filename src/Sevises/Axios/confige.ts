@@ -17,7 +17,7 @@ myAxios.interceptors.response.use((response) => {
 } , (error) => {
     console.log(error);
     if(error.response.status === 404){
-        alert("404")
+        console.log("404")
     }
     return Promise.reject(error)
 })

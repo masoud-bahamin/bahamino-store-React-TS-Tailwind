@@ -1,27 +1,27 @@
 
-import { useEffect, useState ,memo} from 'react';
+import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
 import { Link } from 'react-router-dom';
 import { myAxios } from '../../Sevises/Axios/confige';
 
-type SearchModalProp = { 
-  text: string ;
-  activeDialog : boolean
-  setActiveDialog : React.Dispatch<React.SetStateAction<boolean>>
+type SearchModalProp = {
+  text: string;
+  activeDialog: boolean
+  setActiveDialog: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const SearchModal = ({ text , setActiveDialog ,activeDialog}: SearchModalProp) => {
- 
-  const [data , setData] = useState<ProductType[]>([])
+export const SearchModal = ({ text, setActiveDialog, activeDialog }: SearchModalProp) => {
+
+  const [data, setData] = useState<ProductType[]>([])
 
   const getData = async () => {
-    const response = await myAxios.get(`products/search?q=${text}`)
-    setData(response.data.products)
-  }
+      const response = await myAxios.get(`products/search?q=${text}`)
+      setData(response.data.products)
+    }
 
   useEffect(() => {
     getData()
-  },[text])
+  }, [text])
 
 
   const dialog = () => {
@@ -60,17 +60,17 @@ export const SearchModal = ({ text , setActiveDialog ,activeDialog}: SearchModal
                 data.map(product => (
                   <div className='p-4 border-b bg-white' key={product.id}>
                     <div className='flex gap-4 mb-2'>
-                    <img
-                      className=" w-28 "
-                      src={product.thumbnail}
-                      alt=""
-                    />
-                    <div className="space-y-1 text-center text-primary">
-                      <h3 className="text-lg font-semibold">
-                        {product.title}
-                      </h3>
-                      <p className="text-sm line-clamp-1">{product.description} </p>
-                    </div>
+                      <img
+                        className=" w-28 "
+                        src={product.thumbnail}
+                        alt=""
+                      />
+                      <div className="space-y-1 text-center text-primary">
+                        <h3 className="text-lg font-semibold">
+                          {product.title}
+                        </h3>
+                        <p className="text-sm line-clamp-1">{product.description} </p>
+                      </div>
                     </div>
                     <div className="flex items-center justify-center space-x-2 mt-4">
                       <p className={buttonBorder}>${product.price}</p>
@@ -98,4 +98,4 @@ export const SearchModal = ({ text , setActiveDialog ,activeDialog}: SearchModal
 
 }
 
-export default memo(SearchModal) 
+export default SearchModal
