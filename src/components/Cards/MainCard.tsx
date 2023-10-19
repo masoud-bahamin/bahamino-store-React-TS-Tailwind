@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { ProductType } from "../../Types";
 
-export const MainCard = ({ title, price, thumbnail, rating, description, id }: ProductType) => {
+export const MainCard = ({ title, price, thumbnail, id }: ProductType) => {
     return (
         <Link to={`/product/${id}`} className="mx-auto">
             <div className="mb-10">

@@ -1,16 +1,13 @@
 import { MainCard } from "../components/Cards/MainCard"
 import Header from "../components/Header/Header"
-import { Link } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
 import { useFetch } from "../Hooks/useFetch"
-import AnimationDiv from "../components/Animations/AnimationDiv"
 import Swal from "sweetalert2"
 import MainSlider from "../components/Sliders/MainSlider"
 import IconBoxes from "../components/IconBoxes/IconBoxes"
 import Brands from "../components/Brands/Brands"
-import { CategoriCard } from "../components/Cards/CategoriCard"
 import { useEffect, useState } from "react"
-import { firstData, secondData } from "../Data"
+import { firstData } from "../Data"
 import { VeiwCard } from "../components/Cards/VeiwCard"
 import CategorySlider from "../components/Sliders/CategorySlider"
 import { ProductType } from "../Types"
@@ -21,7 +18,6 @@ type FilterType = "all" | "new" | "trend" | "best" | "cost"
 function Home() {
     const [page, setPage] = useState<number>(4)
     const [page1, setPage1] = useState<number>(4)
-    const [filter, setFilter] = useState<FilterType>("all")
     const [showProuducts, setShowProducts] = useState<ProductType[]>([])
 
     const { data, error, loading } = useFetch('products')

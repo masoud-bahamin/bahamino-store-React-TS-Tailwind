@@ -141,42 +141,42 @@ function Header() {
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-[22px] h-[22px]">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                     </svg>
-                                    <span className="last ">All Categories</span>
+                                    <span className=" font-medium">All Categories</span>
                                 </Link>
                             </div>
                             <ul className="lg:flex lg:flex-wrap p-1 md:p-2  text-sm" id="menu_nav">
                                 <li className="relative mx-1 px-4 py-2 group rounded-full mb-1 md:mb-0" id="button_home">
                                     <NavLink to={'/'} className="text-text hover:text-primary">
-                                        <span className="last ">Home</span>
+                                        <span className=" font-medium ">Home</span>
                                     </NavLink>
                                 </li>
 
                                 <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_admin">
                                     <a className="text-text hover:text-primary" href="#">
-                                        <span className="">About Us</span>
+                                        <span className=" font-medium ">About Us</span>
                                     </a>
 
                                 </li>
                                 <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_admin">
                                     <NavLink to={"/shop"} className="text-text hover:text-primary" >
-                                        <span className="">Shop</span>
+                                        <span className=" font-medium ">Shop</span>
                                     </NavLink>
 
                                 </li>
                                 <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_moderate">
                                     <a className="text-text hover:text-primary" href="#">
-                                        <span className="">Contact Us</span>
+                                        <span className=" font-medium ">Contact Us</span>
                                     </a>
                                     <ul className="absolute w-40 left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white z-10 hidden group-hover:block">
                                         <svg className="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
                                         <li className="p-1 rounded text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100">
                                             <a className="px-2 py-1" href="#">
-                                                <span className="">Email</span>
+                                                <span className=" font-medium ">Email</span>
                                             </a>
                                         </li>
                                         <li className="p-1 rounded text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100">
                                             <a className="px-2 py-1" href="#">
-                                                <span className="">Social Media</span>
+                                                <span className=" font-medium ">Social Media</span>
                                             </a>
                                         </li>
                                     </ul>

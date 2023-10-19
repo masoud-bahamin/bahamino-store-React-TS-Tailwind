@@ -1,4 +1,5 @@
 import { useReducer } from "react"
+import { ProductType } from "../Types";
 
 const intialValue: ProductType[] = []
 

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
 import { Link } from 'react-router-dom';
 import { myAxios } from '../../Sevises/Axios/confige';
+import { ProductType } from '../../Types';
 
 type SearchModalProp = {
   text: string;

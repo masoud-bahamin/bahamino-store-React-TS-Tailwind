@@ -6,6 +6,7 @@ import { productContext } from "../Contexts/ProductContext";
 import { useNavigate } from "react-router-dom"
 import Footer from "../components/Footer/Footer";
 import { myAxios } from "../Sevises/Axios/confige";
+import { ProductType } from "../Types";
 
 function Product() {
   const [product, setProduct] = useState<ProductType | null>(null)
@@ -108,12 +109,12 @@ function Product() {
                       addToBasket(product)
                       navigate('/cart')
                     }}
-                      className="px-4 py-2 bg-orange-300 hover:bg-yellow-600 rounded">BUY</button>
-                    <button className="px-4 py-2 rounded hover:bg-orange-300 bg-white text-slate-900 border border-orange-300">SEND MESSAGE</button>
+                      className="px-4 py-2 bg-primary hover:bg-bold text-white rounded">BUY</button>
+                    <button className="px-4 py-2 rounded hover:bg-primary bg-white text-primary hover:text-white border border-primary">SEND MESSAGE</button>
                   </div>
                   <div className=" w-full max-w-xs mb-5">
                     <div className="mt-1">
-                      <select className="mt-1 block w-full rounded-md border border-gray-300 py-2 pl-3 pr-10 text-base focus:border-orange-300 focus:outline-none focus:ring-orange-300 sm:text-sm">
+                      <select className="mt-1 block w-full rounded-md border border-gray-300 py-2 pl-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-primary sm:text-sm">
                         <option value="1">Shipping Details</option>
                         <option value="2">Free</option>
                       </select>

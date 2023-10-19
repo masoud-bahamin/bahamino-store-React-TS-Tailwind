@@ -50,8 +50,8 @@ function Footer() {
                         <div className=''>
                             <p className='mb-6 text-sm font-normal text-detail'>NEWSLETTER</p>
                             <div className=' flex rounded mb-5'>
-                                <input className='md:w-[285px] h-12 pl-2 bg-transparent text-base border rounded-lg mr-2' type="text" placeholder='Your Email' />
-                                <button className='py-3 rounded-lg font-medium text-base px-6 bg-primary text-white'>SUBSCRIBE</button>
+                                <input className='md:w-[285px] h-12 pl-2 bg-transparent text-sm lg:text-base border rounded-lg mr-1 sm:mr-2' type="text" placeholder='Your Email' />
+                                <button className='py-3 rounded-lg font-medium text-sm lg:text-base px-6 bg-primary text-white'>SUBSCRIBE</button>
                             </div>
                             <p className=' font-medium text-[15px] cursor-pointer'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim.</p>
                         </div>
@@ -59,7 +59,7 @@ function Footer() {
                 </div>
             </div>
             <div className='container mx-auto px-4 sm:px-2 flex items-center justify-between py-6'>
-                <p className="text-sm text-detail">@ 2023 - Blogy - Develop by <span className="text-bold cursor-pointer">Masoud Bahamin</span></p>
+                <p className="text-sm text-detail">@ 2023 - Blogy - Develop by <a href="https://bahamin.online/" className="text-bold cursor-pointer">Masoud Bahamin</a></p>
                <img src="/img/c2.png" className=" grayscale hidden sm:block" alt="" />
             </div>
         </footer>

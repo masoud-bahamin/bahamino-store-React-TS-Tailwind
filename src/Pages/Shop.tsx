@@ -10,6 +10,7 @@ import IconBoxes from "../components/IconBoxes/IconBoxes"
 import Brands from "../components/Brands/Brands"
 import { CategoriCard } from "../components/Cards/CategoriCard"
 import { useState } from "react"
+import { secondData } from "../Data"
 
 
 function Shop() {
@@ -197,8 +198,8 @@ function Shop() {
                     </div>
                 ) : (
                     <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5 ">
-                        {data?.products?.map((product, i) => {
-                            if (i > 8 && i < 14) return <AnimationDiv position={i % 2 === 0 ? "left" : "right"} key={product.id}><CategoriCard  {...product} /></AnimationDiv>
+                        {secondData.map((product, i) => {
+                            if (i < 5) return <AnimationDiv position={i % 2 === 0 ? "left" : "right"} key={product.id}><CategoriCard  {...product} /></AnimationDiv>
                         })}
                     </div>
                 )}

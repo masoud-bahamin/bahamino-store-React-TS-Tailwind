@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function MainSlider() {
     return (
@@ -9,7 +9,7 @@ function MainSlider() {
                     <h2 className=' font-bold text-4xl md:text-[68px] mb-3 leading-[110%]'>Best Furniture <br />
                         Collection for your <br />
                         interior.</h2>
-                    <button className='bg-primary text-white rounded-lg px-6 py-3 font-semibold flex gap-5'>
+                    <button className='bg-primary text-white hover:bg-transparent hover:border border-primary hover:text-primary rounded-lg px-6 py-3 font-medium flex gap-5'>
                         Shop Now
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -27,12 +27,12 @@ function MainSlider() {
                 </div>
                 <div className='hidden absolute bottom-[100px] h-[340px] w-[1564px] md:flex flex-col'>
                     <div className='flex justify-between'>
-                        <div className='bg-white text-primary rounded-full p-3 cursor-pointer'>
+                        <div className='bg-white text-primary hover:bg-primary hover:text-white rounded-full p-3 cursor-pointer'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-5">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
                             </svg>
                         </div>
-                        <div className='bg-white text-primary rounded-full p-3 cursor-pointer'>
+                        <div className='bg-white text-primary hover:bg-primary hover:text-white rounded-full p-3 cursor-pointer'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-5">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                             </svg>

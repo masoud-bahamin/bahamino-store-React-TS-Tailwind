@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react"
-import { boolean } from "yup";
 import { myAxios } from "../Sevises/Axios/confige";
 import { User } from "../Types";
 
@@ -14,6 +13,7 @@ type UserContext = {
     setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
     userInfos: UserInfo;
     setUserInfos: React.Dispatch<React.SetStateAction<UserInfo>>;
+    loading: boolean
 }
 export const userContext = createContext({} as UserContext)
 
@@ -48,7 +48,7 @@ const UserContextProvaider = ({ children }: { children: React.JSX.Element }) => 
 
     return (
         <userContext.Provider value={{
-            isLogin, setIsLogin, userInfos, setUserInfos
+            isLogin, setIsLogin, userInfos, setUserInfos , loading
         }}>
             {children}
         </userContext.Provider>

@@ -3,11 +3,16 @@ import './App.css'
 import routes from './routes'
 import ProductContextProvider from './Contexts/ProductContext'
 import UserContextProvaider from './Contexts/userContext'
+import { useEffect } from 'react'
 
 
 function App() {
 
   const router = useRoutes(routes)
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  })
 
   return (
     <UserContextProvaider>

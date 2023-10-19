@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { myAxios } from "../Sevises/Axios/confige"
+import { ProductType } from "../Types"
 
 type dataType = { products?: ProductType[] } | null
 
