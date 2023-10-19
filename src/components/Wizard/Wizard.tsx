@@ -4,6 +4,7 @@ import { productSchema } from "../../validations/validation";
 import { myAxios } from "../../Sevises/Axios/confige";
 import Swal from "sweetalert2";
 import AddProductCart from "../Cards/addProductCart";
+import { initialValuesTypes } from "../../Types";
 
 const steps = [
     {
@@ -197,7 +198,7 @@ const FormWizard = () => {
                                                     placeholder="price*"
                                                     name="price"
                                                 />
-                                                <label htmlFor="fileInput" className="bg-white px-4 py-2 text-orange-400 w-fit flex gap-2 hover:bg-orange-300 hover:text-white cursor-pointer">
+                                                <label htmlFor="fileInput" className="bg-white px-4 py-2 text-primary w-fit flex gap-2 hover:bg-primary hover:text-white cursor-pointer">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                                                     </svg>
@@ -281,16 +282,16 @@ const FormWizard = () => {
                                             } mt-10`}
                                     >
                                         {stepNumber !== 0 && stepNumber !== 4 && (
-                                            <button className="bg-white text-orange-400 border border-orange-400 py-2 px-4 rounded hover:scale-105" onClick={handlePrev}>prev</button>
+                                            <button className="bg-white text-primary border border-primary py-2 px-4 rounded hover:scale-105" onClick={handlePrev}>prev</button>
                                         )}
                                         {stepNumber < 2 ? (
-                                            <button className="px-4 py-2 bg-orange-300 text-white rounded hover:scale-105"
+                                            <button className="px-4 py-2 bg-primary text-white rounded hover:scale-105"
                                                 onClick={onSubmit} >next</button>
                                         ) : stepNumber === 2 ? (
-                                            <button className="px-4 py-2 bg-orange-300 text-white rounded hover:scale-105"
+                                            <button className="px-4 py-2 bg-primary text-white rounded hover:scale-105"
                                                 type="submit" >next</button>
                                         ) : stepNumber === 3 ? (
-                                            <button className="px-4 py-2 bg-orange-300 text-white rounded hover:scale-105"
+                                            <button className="px-4 py-2 bg-primary text-white rounded hover:scale-105"
                                                 onClick={addProduct} >Submit</button>
                                         ) : (
                                             <>FINISH YOUR WIZARD</>

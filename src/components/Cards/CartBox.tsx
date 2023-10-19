@@ -1,5 +1,5 @@
 import { memo, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 import { productContext } from "../../Contexts/ProductContext";
 
 const CartBox = ({ title, price, thumbnail, id }: ProductType) => {

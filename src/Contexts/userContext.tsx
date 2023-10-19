@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react"
 import { boolean } from "yup";
 import { myAxios } from "../Sevises/Axios/confige";
+import { User } from "../Types";
 
 
 const serverToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoia21pbmNoZWxsZSIsImVtYWlsIjoia21pbmNoZWxsZUBxcS5jb20iLCJmaXJzdE5hbWUiOiJKZWFubmUiLCJsYXN0TmFtZSI6IkhhbHZvcnNvbiIsImdlbmRlciI6ImZlbWFsZSIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvYXV0cXVpYXV0LnBuZyIsImlhdCI6MTY5NjI1NTYzNywiZXhwIjoxNjk2MjU5MjM3fQ.wPN4kCGWEemrOelRXrzs-By2v71mK8WplLDJcyuniIc"

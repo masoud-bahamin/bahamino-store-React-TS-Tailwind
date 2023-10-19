@@ -1,5 +1,5 @@
 
-interface ProductType {
+export interface ProductType {
     id: number;
     title: string;
     description: string;
@@ -32,13 +32,27 @@ interface ProductType {
     images: string[];
 }
 
+export type ProductVeiw = {
+    title: string,
+    price: number,
+    thumbnail: string,
+    id: number
+}
 
-type addProductType = {
+export type CategoryVeiw = {
+    title: string,
+    products: number,
+    thumbnail: string,
+    id: number
+}
+
+
+export type addProductType = {
     [properti in keyof ProductType]?: ProductType[properti]
 }
 
 
-type initialValuesTypes = {
+export type initialValuesTypes = {
     title: string,
     price: number | string
     description: string
@@ -46,7 +60,7 @@ type initialValuesTypes = {
     phone: string;
 }
 
-interface User {
+export interface User {
     id: number
     username: string
     email: string

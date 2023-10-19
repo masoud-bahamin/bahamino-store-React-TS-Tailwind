@@ -1,4 +1,12 @@
-.active {
-    color: orange !important;
+@font-face {
+    font-family: "Inter";
+    src: url(/src/assets/fonts/Inter/static/Inter-Regular.ttf);
+}
 
+html , body , p , div , span {
+    font-family: "Inter";
+}
+
+.active {
+    color: #029FAE !important;
 }

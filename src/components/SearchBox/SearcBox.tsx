@@ -17,7 +17,7 @@ function SearcBox() {
         <div className="relative">
             <SearchModal text={searchValue} activeDialog={activeDialog} setActiveDialog={setActiveDialog} />
             <input onChange={e => setSearchValue(e.currentTarget.value)} value={searchValue}
-                className="w-full rounded hover:shadow-lg focus:shadow-lg focus:outline-0 px-2.5 py-2 border pl-10" type="text" placeholder="Search..." />
+                className="w-[413px] h-11 rounded hover:shadow-lg focus:shadow-lg focus:outline-0 border pl-4" type="text" placeholder="Search here..." />
         </div>
     )
 }

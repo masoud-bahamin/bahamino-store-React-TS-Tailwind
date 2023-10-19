@@ -5,6 +5,7 @@ import Login from "./Pages/Login"
 import Product from "./Pages/Product"
 import Profile from "./Pages/Profile"
 import Register from "./Pages/Register"
+import Shop from "./Pages/Shop"
 
 const routes = [
     {path:"/" , element:<Home />},
@@ -14,6 +15,7 @@ const routes = [
     {path:"/cart" , element:<Cart />},
     {path:"/login" , element:<Login />},
     {path:"/register" , element:<Register />},
+    {path:"/shop" , element:<Shop />},
 ]
 
 export default routes

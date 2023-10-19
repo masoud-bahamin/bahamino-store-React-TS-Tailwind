@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom"
+import { initialValuesTypes } from "../../Types";
 
 interface addProductCartProps extends initialValuesTypes{
     imageSrc : string
