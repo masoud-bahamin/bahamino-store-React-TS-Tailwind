@@ -2,7 +2,7 @@ import React from 'react'
 
 function Brands() {
   return (
-    <div className='container mx-auto py-6 my-6 flex items-center justify-between'>
+    <div className='container px-8 md:px-0 mx-auto py-6 my-6 flex flex-wrap items-center justify-between'>
         <img src="/img/l1.png" alt="" />
         <img src="/img/l2.png" alt="" />
         <img src="/img/l3.png" alt="" />

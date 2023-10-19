@@ -56,7 +56,7 @@ function Cart() {
                         </small>
                     </div>
                     <button onClick={() => basketContext.removeAllProduct()}
-                        className="px-4 py-2 rounded hover:bg-orange-300 bg-white text-slate-900 border border-orange-300 text-xs float-right">Clear Bag</button>
+                        className="px-4 py-2 rounded hover:bg-primary bg-white text-slate-900 border border-primary text-xs float-right">Clear Bag</button>
                 </div>
                 <div className="w-full md:w-1/2 p-6 border rounded flex justify-center pt-12">
                     <div>
@@ -93,7 +93,7 @@ function Cart() {
                         }}
                             type="button" className="px-3 py-2 md:py-3 md:px-4 block w-full md:w-[18rem]
                         xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:text-gray-600
-                        placeholder:font-normal border-2 ring-2 ring-transparent mb-4 bg-orange-300
+                        placeholder:font-normal border-2 ring-2 ring-transparent mb-4 bg-primary
                         border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300 
                        duration-300 text-white" placeholder="Password:" value="Send" />
                     </div>

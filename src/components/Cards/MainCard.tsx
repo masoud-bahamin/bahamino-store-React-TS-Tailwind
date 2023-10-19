@@ -3,7 +3,7 @@ import { ProductType } from "../../Types";
 
 export const MainCard = ({ title, price, thumbnail, rating, description, id }: ProductType) => {
     return (
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/${id}`} className="mx-auto">
             <div className="mb-10">
                 <div className="group">
                     <div className="relative w-full rounded-xl mb-[10px]">

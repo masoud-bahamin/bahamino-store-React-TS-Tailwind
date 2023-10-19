@@ -2,7 +2,7 @@
 
 function Topbar() {
   return (
-    <div className=" bg-bold w-full">
+    <div className=" bg-bold w-full hidden sm:block">
       <div className="container mx-auto px-4 sm:px-2 h-11 text-white text-xs font-extralight flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-4 h-4 mr-1">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />

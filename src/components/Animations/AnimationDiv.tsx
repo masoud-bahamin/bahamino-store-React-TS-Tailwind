@@ -3,10 +3,11 @@ import "./Animations.css"
 
 type AnimationDivProps = {
     children: React.ReactNode;
-    position: "right" | "left"
+    position: "right" | "left";
+    className?:string
 }
 
-function AnimationDiv({ children, position }: AnimationDivProps) {
+function AnimationDiv({ children, position , className}: AnimationDivProps) {
 
     const [isAnimated, setIsAnimated] = React.useState(false)
 
@@ -31,11 +32,10 @@ function AnimationDiv({ children, position }: AnimationDivProps) {
 
     }, [])
 
-    const className = ` transition-all duration-1000 ${position === "right" ? " translate-x-[2500px]" : " -translate-x-[2500px]"} animation-container ${isAnimated ? "animated" : ""} `
 
     return (
         <div ref={divElement}
-            className={className}>
+            className={`${className} transition-all duration-1000 ${position === "right" ? " translate-x-[2500px]" : " -translate-x-[2500px]"} animation-container ${isAnimated ? "animated" : ""} `}>
             {children}
         </div>
     )

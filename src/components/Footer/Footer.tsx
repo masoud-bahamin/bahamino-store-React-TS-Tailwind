@@ -3,7 +3,7 @@ import AnimationDiv from "../Animations/AnimationDiv"
 function Footer() {
     return (
         <footer>
-            <div className='border py-20'>
+            <div className='border py-10 md:py-20'>
                 <div className='container mx-auto px-4 sm:px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-bold'>
                     <AnimationDiv position="left">
                         <div className=''>
@@ -11,7 +11,7 @@ function Footer() {
                             <p className='mb-3'>62 North Helen Street Green Cove</p>
                             <p className='mb-3'>Phone: +90 535 484 3540</p>
                             <p className='mb-6'>Email: bahaminwp@gmail.com</p>
-                            <div className='flex items-center gap-1'>
+                            <div className='flex items-center gap-1 mb-4 lg:mb-0'>
                                 <span className=' cursor-pointer hover:scale-110 fill-text hover:fill-primary rounded-full hover:border hover:border-primary p-2'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" ><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg>                            </span>
                                 <span className=' cursor-pointer hover:scale-110 fill-text hover:fill-primary rounded-full hover:border hover:border-primary p-2'>
@@ -27,7 +27,7 @@ function Footer() {
                         </div>
                     </AnimationDiv>
                     <div className=''>
-                        <div className='flex gap-20'>
+                        <div className='flex gap-5 lg:gap-10 xl:gap-20'>
                             <div>
                                 <p className='mb-6 text-sm font-normal text-detail'>CATEGORY</p>
                                 <p className='mb-3 cursor-pointer font-medium hover:text-primary hover:border-b border-primary'>About Us</p>
@@ -49,8 +49,8 @@ function Footer() {
                     <AnimationDiv position="right">
                         <div className=''>
                             <p className='mb-6 text-sm font-normal text-detail'>NEWSLETTER</p>
-                            <div className=' flex justify-between w-fit rounded mb-5'>
-                                <input className='w-[285px] h-12 pl-2 bg-transparent text-base border rounded-lg mr-2' type="text" placeholder='Your Email' />
+                            <div className=' flex rounded mb-5'>
+                                <input className='md:w-[285px] h-12 pl-2 bg-transparent text-base border rounded-lg mr-2' type="text" placeholder='Your Email' />
                                 <button className='py-3 rounded-lg font-medium text-base px-6 bg-primary text-white'>SUBSCRIBE</button>
                             </div>
                             <p className=' font-medium text-[15px] cursor-pointer'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim.</p>
@@ -60,7 +60,7 @@ function Footer() {
             </div>
             <div className='container mx-auto px-4 sm:px-2 flex items-center justify-between py-6'>
                 <p className="text-sm text-detail">@ 2023 - Blogy - Develop by <span className="text-bold cursor-pointer">Masoud Bahamin</span></p>
-               <img src="/img/c2.png" className=" grayscale" alt="" />
+               <img src="/img/c2.png" className=" grayscale hidden sm:block" alt="" />
             </div>
         </footer>
     )

@@ -105,7 +105,7 @@ function Home() {
             <div className="container mx-auto px-4 sm:px-2 mb-12">
                 <div className="text-center mb-8">
                     <h3 className="semibold text-[32px] ">Our Products</h3>
-                    <ul className='flex gap-2 items-center text-detail mx-auto w-fit'>
+                    <ul className='flex flex-wrap sm:flex-nowrap gap-2 items-center text-detail mx-auto w-fit'>
                         <li onClick={() => filterHandler("all")} className="p-2 cursor-pointer text-bold">ALL</li>
                         <li onClick={() => filterHandler("new")} className="p-2 cursor-pointer hover:text-bold">NEWEST</li>
                         <li onClick={() => filterHandler("trend")} className="p-2 cursor-pointer hover:text-bold">TRENDING</li>
@@ -128,7 +128,7 @@ function Home() {
                         ))}
                     </div>
                 ) : (
-                    <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                    <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                         {showProuducts?.map((product, i) => {
                             if (i < 8) return <MainCard key={product.id}  {...product} />
                         })}
@@ -138,16 +138,16 @@ function Home() {
             </div>
             <div className="bg-page mb-12 py-12">
                 <div className="container mx-auto px-4 sm:px-2">
-                    <div className=" flex justify-between mb-8">
+                    <div className=" flex flex-wrap sm:flex-nowrap justify-between mb-8">
                         <h3 className="semibold text-[32px] ">What Client Says About Us</h3>
                         <div className='flex gap-4 items-center'>
-                            <div onClick={() => setPage(prev => prev > 7 ? prev - 4 : 4)}
+                            <div 
                                 className='bg-page text-bold hover:text-white hover:bg-primary rounded-full p-3 cursor-pointer'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
                                 </svg>
                             </div>
-                            <div onClick={() => setPage(prev => prev < data!.products!.length ? prev + 4 : prev)}
+                            <div 
                                 className='bg-page text-bold hover:text-white hover:bg-primary rounded-full p-3 cursor-pointer'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -156,8 +156,8 @@ function Home() {
                         </div>
                     </div>
                     <div className="flex gap-6">
-                        <div className="w-1/2 flex flex-col justify-between h-[345px] bg-white rounded-xl p-10">
-                            <div className="flex gap-6">
+                        <div className="hidden lg:flex w-1/2 flex-col justify-between xl:h-[345px] bg-white rounded-xl p-10">
+                            <div className="flex  gap-6">
                                 <p className="border border-primary"></p>
                                 <p className="text-xl text-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet mi nec
                                     massa tincidunt blandit et eu sem. Maecenas laoreet ultrices diam dignissim posuere.
@@ -176,7 +176,7 @@ function Home() {
                                 <img src="/img/q1.png" alt="" />
                             </div>
                         </div>
-                        <div className="w-1/2 flex flex-col justify-between h-[345px] bg-white rounded-xl p-10">
+                        <div className="w-full lg:w-1/2 flex flex-col justify-between lg:h-[345px] bg-white rounded-xl p-10">
                             <div className="flex gap-6">
                                 <p className="border border-primary"></p>
                                 <p className="text-xl text-text">
@@ -186,14 +186,14 @@ function Home() {
                                 </p>
                             </div>
                             <div className="flex justify-between items-center">
-                                <div className="flex gap-3">
+                                <div className="flex gap-3 mt-3 sm:mt-0">
                                     <img src="/img/u1.png" alt="" />
                                     <div>
                                         <p className="text-xl font-medium">Kristin Watson</p>
                                         <p className="text-detail">Fashion Designer</p>
                                     </div>
                                 </div>
-                                <img src="/img/q1.png" alt="" />
+                                <img src="/img/q1.png" alt="" className="hidden sm:block" />
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@ function Home() {
                         ))}
                     </div>
                 ) : (
-                    <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                    <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                         {firstData.map((product, i) => {
                             if (i < page1 && i > page1 - 5) return <VeiwCard key={product.id} {...product} />
                         })}
