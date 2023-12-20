@@ -1,7 +1,7 @@
 <img src="https://github.com/masoud-bahamin/bahamino-store-React-TS-Tailwind/blob/main/img/store1.png?raw=true" style="width : 700px"/>
 
 # React + TypeScript + Vite + Tailwid
-
+you can see this page online here :
 https://store.bahamin.online/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
