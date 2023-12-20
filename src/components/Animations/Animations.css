@@ -1,5 +1,5 @@
 .animation-container{
-    transform: translateX(2200px);
+    /* transform: translateX(2200px); */
     transition: all 1s ease-in;
 }
 
