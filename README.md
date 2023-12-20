@@ -1,3 +1,5 @@
+<img src="https://github.com/masoud-bahamin/bahamino-store-React-TS-Tailwind/blob/main/img/store1.png?raw=true" style="width : 700px"/>
+
 # React + TypeScript + Vite + Tailwid
 
 https://store.bahamin.online/
