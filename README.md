@@ -2,7 +2,7 @@
 
 # React + TypeScript + Vite + Tailwid
 you can see this page online here :
-https://store.bahamin.online/
+https://store.bahamin.us/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
