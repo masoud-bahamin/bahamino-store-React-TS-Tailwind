@@ -2,7 +2,7 @@ import { CategoryVeiw, ProductVeiw } from "./Types";
 
 
 export const firstData : ProductVeiw[] = [
-    {id: 1, title:"Library Stool Chair" , thumbnail:"/src/assets/img/p2.png" , price:20},
+    {id: 1, title:"Library Stool Chair" , thumbnail:"./src/assets/img/p2.png" , price:20},
     {id: 2, title:"Library Stool Sofa" , thumbnail:"/src/assets/img/p3.png" , price:24},
     {id: 3, title:"Wooden Stool Chair" , thumbnail:"/src/assets/img/p4.png" , price:18},
     {id: 4, title:"Wing Stool Chair" , thumbnail:"/src/assets/img/p5.png" , price:36},
