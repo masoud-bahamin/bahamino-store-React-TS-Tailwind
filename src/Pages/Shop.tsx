@@ -204,7 +204,7 @@ function Shop() {
             </div>
             <div className="container mx-auto px-4 sm:px-2 mb-12">
                 <div className="text-center mb-10">
-                    <h3 className="semibold text-[32px] ">All Products</h3>             
+                    <h3 className="text-[32px] font-semibold">All Products</h3>             
                 </div>
                 {loading ? (
                     <div className=" grid grid-cols-5 gap-6">
