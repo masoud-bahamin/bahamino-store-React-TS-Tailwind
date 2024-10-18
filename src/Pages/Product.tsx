@@ -1,10 +1,8 @@
 import { useEffect, useState, useContext } from "react";
-import Header from "../components/Header/Header"
 import { useParams } from 'react-router-dom';
 import Loader from "../components/Loader/Loader";
 import { productContext } from "../Contexts/ProductContext";
 import { useNavigate } from "react-router-dom"
-import Footer from "../components/Footer/Footer";
 import { myAxios } from "../Sevises/Axios/confige";
 import { ProductType } from "../Types";
 
@@ -35,7 +33,6 @@ function Product() {
 
   return (
     <div>
-      <Header />
       {product ? (
         <>
           <section className="bg-white py-8">
@@ -162,7 +159,6 @@ function Product() {
           <Loader />
         </div>
       )}
-      <Footer />
     </div>
   )
 }

@@ -74,7 +74,7 @@ function Header() {
                                 </svg>
                                 <span className="hidden sm:inline-block">Cart</span>
                                 <span className=" rounded-full text-center align-middle w-4 h-4 bg-primary text-white">{basketContext.basket?.length}</span>
-                                <div className="absolute top-9 z-20 -right-5 sm:right-0 md:right-10  bg-white w-80 sm:w-96 p-5 rounded text-primary hidden group-hover:block">
+                                <div className="absolute top-9 z-20 -right-5 sm:right-0 md:right-10 w-80 sm:w-96 p-5 rounded text-primary hidden group-hover:block">
                                     {
                                         basketContext.basket?.length ? (
                                             <>

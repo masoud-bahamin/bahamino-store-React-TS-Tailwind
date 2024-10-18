@@ -4,6 +4,8 @@ import routes from './routes'
 import ProductContextProvider from './Contexts/ProductContext'
 import UserContextProvaider from './Contexts/userContext'
 import { useEffect } from 'react'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -17,9 +19,11 @@ function App() {
   return (
     <UserContextProvaider>
       <ProductContextProvider>
-        <div className=' bg-white overflow-x-hidden'>
+        <Header />
+        <div className='w-screen bg-white overflow-x-hidden'>
           {router}
         </div>
+        <Footer />
       </ProductContextProvider>
     </UserContextProvaider>
   )

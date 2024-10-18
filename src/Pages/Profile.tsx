@@ -1,7 +1,5 @@
 import { MainCard } from "../components/Cards/MainCard"
 import AddProductCart from "../components/Cards/addProductCart"
-import Footer from "../components/Footer/Footer"
-import Header from "../components/Header/Header"
 import FormWizard from "../components/Wizard/Wizard"
 import { useState } from "react"
 
@@ -10,7 +8,6 @@ function Profile() {
     const [isShowWizard, setIsShowWizard] = useState<boolean>(false)
     return (
         <div className="">
-            <Header />
             <div
                 className="content-wrapper transition-all duration-150" id="content_wrapper">
                 <div className="page-content">
@@ -188,8 +185,6 @@ function Profile() {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </div>
     )
 }

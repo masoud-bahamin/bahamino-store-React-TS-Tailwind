@@ -12,7 +12,7 @@ const CartBox = ({ title, price, thumbnail, id }: ProductType) => {
     return (
         <>
             <p className="bg-white rounded-full p-1 px-2 w-fit hover:scale-110 cursor-pointer" onClick={() => context.removeProduct(id)}>X</p>
-            <div className="mb-5 shadow-xl hover:shadow duration-200 rounded-xl flex justify-between p-4 bg-white">
+            <div className="mb-5 border border-gray-200 hover:shadow duration-200 rounded-xl flex justify-between p-4 bg-white">
                 <div className="relative rounded-xl">
                     <img
                         className="rounded-xl hover:scale-105 duration-300 w-20 h-16"

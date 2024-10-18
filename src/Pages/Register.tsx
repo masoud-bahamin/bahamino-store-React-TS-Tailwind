@@ -1,13 +1,10 @@
 import { Formik, Field, Form } from "formik"
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
 import { UserSchema } from "../validations/validation"
 import { Link } from "react-router-dom"
 
 function Register() {
     return (
         <div>
-            <Header />
             <div className='w-[1740px] h-[156px] bg-page rounded-b-[48px] mx-auto overflow-hidden'>
                 <div className='py-[50px] md:px-[210px] px-8'>
                     <div className="flex gap-2 text-text text-sm mb-2">
@@ -45,7 +42,6 @@ function Register() {
                     </Formik>
                 </div>
             </div>
-            <Footer />
         </div >
     )
 }

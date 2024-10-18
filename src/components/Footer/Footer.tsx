@@ -2,9 +2,9 @@ import AnimationDiv from "../Animations/AnimationDiv"
 
 function Footer() {
     return (
-        <footer>
+        <footer className=" overflow-x-hidden">
             <div className='border py-10 md:py-20'>
-                <div className='container mx-auto px-4 sm:px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-bold'>
+                <div className='container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-bold'>
                     <AnimationDiv position="left">
                         <div className=''>
                             <img src="/img/logo.png" alt="" className="mb-6" />

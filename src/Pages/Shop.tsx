@@ -1,7 +1,5 @@
 import { MainCard } from "../components/Cards/MainCard"
-import Header from "../components/Header/Header"
 import { Link } from "react-router-dom"
-import Footer from "../components/Footer/Footer"
 import { useFetch } from "../Hooks/useFetch"
 import AnimationDiv from "../components/Animations/AnimationDiv"
 import Swal from "sweetalert2"
@@ -30,14 +28,11 @@ function Shop() {
     }
 
     return (
-        <div>
-            <Header />
-            <MainSlider />
-            <IconBoxes />
-            <Brands />
+        <div className="w-full overflow-x-hidden">
+           
             {/* First baner */}
             <AnimationDiv position="left">
-                <div className="bg-[url(./img/baner.webp)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
+                <div className="bg-[url(/img/baner.webp)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
                     <div className="container mx-auto px-4 sm:px-2">
                         <h2 className="text-3xl md:text-4xl mb-6">Drowing Room</h2>
                         <h3 className="text-6xl md:text-8xl bg-primary p-2 mb-6 w-fit">Inoterior</h3>
@@ -53,6 +48,9 @@ function Shop() {
                     </div>
                 </div>
             </AnimationDiv>
+            <div className="mt-20">
+            <IconBoxes /></div>
+            <Brands />
             {/* categori Icon */}
             <div className="container mx-auto px-4 sm:px-2 py-8 xl:px-32">
                 <div className="grid grid-cols-4  md:grid-cols-8 lg:grid-cols-8 ">
@@ -206,15 +204,8 @@ function Shop() {
 
             </div>
             <div className="container mx-auto px-4 sm:px-2 mb-12">
-                <div className="text-center mb-8">
-                    <h3 className="semibold text-[32px] ">Our Products</h3>
-                    <ul className='flex gap-2 items-center text-detail mx-auto w-fit'>
-                        <li className="p-2 cursor-pointer text-bold">ALL</li>
-                        <li className="p-2 cursor-pointer hover:text-bold">NEWEST</li>
-                        <li className="p-2 cursor-pointer hover:text-bold">TRENDING</li>
-                        <li className="p-2 cursor-pointer hover:text-bold">BEST SELLERS</li>
-                        <li className="p-2 cursor-pointer hover:text-bold">FEATURED</li>
-                    </ul>
+                <div className="text-center mb-10">
+                    <h3 className="semibold text-[32px] ">All Products</h3>             
                 </div>
                 {loading ? (
                     <div className=" grid grid-cols-5 gap-6">
@@ -345,7 +336,7 @@ function Shop() {
             </div>
 
             <AnimationDiv position="right">
-                <div className="bg-[url(./img/b2.jpg)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
+                <div className="bg-[url(/img/b2.jpg)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
                     <div className="container mx-auto px-4 sm:px-2 ">
                         <h2 className="text-3xl md:text-4xl mb-6">Best Products</h2>
                         <h3 className="text-6xl md:text-8xl bg-primary p-2 mb-6 w-fit">Laptops</h3>
@@ -361,7 +352,6 @@ function Shop() {
                     </div>
                 </div>
             </AnimationDiv>
-            <Footer />
         </div>
     )
 }

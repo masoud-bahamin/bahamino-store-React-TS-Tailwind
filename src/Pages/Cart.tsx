@@ -20,7 +20,6 @@ function Cart() {
 
     return (
         <div>
-            <Header />
             <div className="container mx-auto px-4 sm:px-2 flex flex-wrap md:flex-nowrap gap-6 min-h-screen my-12">
                 <div className="w-full md:w-1/2 p-6 border rounded">
                     {
@@ -44,7 +43,7 @@ function Cart() {
                         )
                     }
 
-                    <div className="bg-white my-5 shadow-xl hover:shadow duration-200 rounded-xl flex justify-between p-4">
+                    <div className="bg-white my-5 border border-gray-200 hover:shadow duration-200 rounded-xl flex justify-between p-4">
                         <div className="relative rounded-xl">
                             Total
                         </div>
@@ -93,13 +92,12 @@ function Cart() {
                         }}
                             type="button" className="px-3 py-2 md:py-3 md:px-4 block w-full md:w-[18rem]
                         xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:text-gray-600
-                        placeholder:font-normal border-2 ring-2 ring-transparent mb-4 bg-primary
+                        placeholder:font-normal border-2 ring-2 ring-transparent mb-4 bg-primary hover:text-gray-300 cursor-pointer
                         border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300 
-                       duration-300 text-white" placeholder="Password:" value="Send" />
+                       duration-300 text-white" placeholder="Password:" value="Checkout" />
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

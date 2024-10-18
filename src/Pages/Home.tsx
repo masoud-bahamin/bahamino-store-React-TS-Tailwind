@@ -1,6 +1,4 @@
 import { MainCard } from "../components/Cards/MainCard"
-import Header from "../components/Header/Header"
-import Footer from "../components/Footer/Footer"
 import { useFetch } from "../Hooks/useFetch"
 import Swal from "sweetalert2"
 import MainSlider from "../components/Sliders/MainSlider"
@@ -60,7 +58,6 @@ function Home() {
 
     return (
         <div>
-            <Header />
             <MainSlider />
             <IconBoxes />
             <Brands />
@@ -236,7 +233,6 @@ function Home() {
                 )}
 
             </div>
-            <Footer />
         </div>
     )
 }

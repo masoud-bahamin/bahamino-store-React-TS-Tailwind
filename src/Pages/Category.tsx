@@ -1,10 +1,8 @@
 
-import Header from "../components/Header/Header"
 import { useParams } from 'react-router-dom';
 import Loader from "../components/Loader/Loader";
 import { MainCard } from "../components/Cards/MainCard";
 import { useFetch } from "../Hooks/useFetch";
-import Footer from "../components/Footer/Footer";
 
 function Category() {
 
@@ -14,7 +12,6 @@ function Category() {
 
     return (
         <div>
-            <Header />
             {/* First baner */}
             <div className="bg-[url(./img/baner.webp)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
                 <div className="container mx-auto px-4 sm:px-2">
@@ -47,7 +44,6 @@ function Category() {
                 )}
 
             </div>
-            <Footer />
         </div>
     )
 }

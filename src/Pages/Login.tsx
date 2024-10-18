@@ -1,6 +1,4 @@
 import { Formik, Field, Form } from "formik"
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
 import { UserSchema } from "../validations/validation"
 import { Link, useNavigate } from "react-router-dom"
 import { myAxios } from "../Sevises/Axios/confige"
@@ -54,10 +52,9 @@ function Login() {
         }
     }
     return (
-        <div>
-            <Header />
-            <div className='w-[1740px] h-[156px] bg-page rounded-b-[48px] mx-auto overflow-hidden'>
-                <div className='py-[50px] md:px-[210px] px-8'>
+        <div className="w-full overflow-x-hidden">
+            <div className='w-full h-[156px] bg-page rounded-b-[48px] mx-auto overflow-hidden'>
+                <div className='py-[50px] container'>
                     <div className="flex gap-2 text-text text-sm mb-2">
                         <span className=" cursor-pointer font-light"> Home{""}  &#10095;</span>
                         <span className=" cursor-pointer font-light"> Account  &#10095;</span>
@@ -97,9 +94,8 @@ function Login() {
                     </Formik>
                 </div>
             </div>
-            <div className="p-8">username: kminchelle <br />
+            <div className="p-8 py-96">username: kminchelle <br />
                 password: 0lelplR </div>
-            <Footer />
         </div >
     )
 }
