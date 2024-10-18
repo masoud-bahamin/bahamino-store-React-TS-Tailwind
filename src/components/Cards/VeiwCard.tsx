@@ -10,7 +10,7 @@ export const VeiwCard = ({ title, price, thumbnail, id }: ProductVeiw) => {
                     <div className="relative w-full rounded-xl mb-[10px]">
                         <img
                             className="rounded-md hover:scale-105 duration-300 w-[312px] h-[312px]"
-                            src={`../../assets/img/${thumbnail}`}
+                            src={`${thumbnail}`}
                             alt="card image"
                         />
                         <div className="absolute top-5 left-5 right-5 w-[270px]">

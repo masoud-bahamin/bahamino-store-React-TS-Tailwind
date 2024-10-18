@@ -7,7 +7,7 @@ function Footer() {
                 <div className='container mx-auto px-4 sm:px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-bold'>
                     <AnimationDiv position="left">
                         <div className=''>
-                            <img src="/src/assets/img/logo.png" alt="" className="mb-6" />
+                            <img src="/img/logo.png" alt="" className="mb-6" />
                             <p className='mb-3'>62 North Helen Street Green Cove</p>
                             <p className='mb-3'>Phone: +90 535 484 3540</p>
                             <p className='mb-6'>Email: bahaminwp@gmail.com</p>
@@ -60,7 +60,7 @@ function Footer() {
             </div>
             <div className='container mx-auto px-4 sm:px-2 flex items-center justify-between py-6'>
                 <p className="text-sm text-detail">@ 2023 - Blogy - Develop by <a href="https://bahamin.online/" className="text-bold cursor-pointer">Masoud Bahamin</a></p>
-               <img src="/src/assets/img/c2.png" className=" grayscale hidden sm:block" alt="" />
+               <img src="/img/c2.png" className=" grayscale hidden sm:block" alt="" />
             </div>
         </footer>
     )

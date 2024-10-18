@@ -17,7 +17,7 @@ function MainSlider() {
                     </button>
                 </div>
                 <div className='relative'>
-                    <img src="/src/assets/img/p1.png" alt="" className='z-10 absolute md:-bottom-[200px] w-80 md:w-[475px]' />
+                    <img src="/img/p1.png" alt="" className='z-10 absolute md:-bottom-[200px] w-80 md:w-[475px]' />
                     <div className='relative -mt-[500px] -ml-[160px] w-[747px] h-[747px] rounded-full bg-[#E1E3E5]'>
                         <div className='absolute right-[100px] bottom-[360px] z-30 bg-white  p-5 rounded-full'>
                             <p className='text-[#F05C52] font-bold text-4xl'>54%</p>
