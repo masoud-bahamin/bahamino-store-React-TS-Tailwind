@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { ProductVeiw } from "../../Types";
 
+
 export const VeiwCard = ({ title, price, thumbnail, id }: ProductVeiw) => {
     return (
         <Link to={`/product/${id}`} className="mx-auto">
@@ -9,7 +10,7 @@ export const VeiwCard = ({ title, price, thumbnail, id }: ProductVeiw) => {
                     <div className="relative w-full rounded-xl mb-[10px]">
                         <img
                             className="rounded-md hover:scale-105 duration-300 w-[312px] h-[312px]"
-                            src={thumbnail}
+                            src={`../../assets/img/${thumbnail}`}
                             alt="card image"
                         />
                         <div className="absolute top-5 left-5 right-5 w-[270px]">
