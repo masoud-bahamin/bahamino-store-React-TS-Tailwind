@@ -9,6 +9,7 @@ import Shop from "./Pages/Shop"
 
 const routes = [
     {path:"/" , element:<Home />},
+    {path:"/*" , element:<h1>404</h1>},
     {path:"/profile" , element:<Profile />},
     {path:"/product/:productId" , element:<Product />},
     {path:"/category/:categoryId" , element:<Category />},
