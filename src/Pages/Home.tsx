@@ -11,6 +11,7 @@ import { firstData } from "../Data"
 import { VeiwCard } from "../components/Cards/VeiwCard"
 import CategorySlider from "../components/Sliders/CategorySlider"
 import { ProductType } from "../Types"
+import img1 from '../assets/img/p1.png'
 
 type FilterType = "all" | "new" | "trend" | "best" | "cost"
 
@@ -64,6 +65,7 @@ function Home() {
             <MainSlider />
             <IconBoxes />
             <Brands />
+            <img src={img1}  className="w-12"/>
             {/* cards */}
             <div className="container mx-auto px-4 sm:px-2 mb-12">
                 <div className="flex justify-between mb-8">
