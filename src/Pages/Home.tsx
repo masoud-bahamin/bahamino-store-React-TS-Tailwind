@@ -163,13 +163,13 @@ function Home() {
                             </div>
                             <div className="flex justify-between items-center">
                                 <div className="flex gap-3">
-                                    <img src="/img/u1.png" alt="" />
+                                    <img src="/src/assets/img/u1.png" alt="" />
                                     <div>
                                         <p className="text-xl font-medium">Kristin Watson</p>
                                         <p className="text-detail">Fashion Designer</p>
                                     </div>
                                 </div>
-                                <img src="/img/q1.png" alt="" />
+                                <img src="/src/assets/img/q1.png" alt="" />
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2 flex flex-col justify-between lg:h-[345px] bg-white rounded-xl p-10">
@@ -183,13 +183,13 @@ function Home() {
                             </div>
                             <div className="flex justify-between items-center">
                                 <div className="flex gap-3 mt-3 sm:mt-0">
-                                    <img src="/img/u1.png" alt="" />
+                                    <img src="/src/assets/img/u1.png" alt="" />
                                     <div>
                                         <p className="text-xl font-medium">Kristin Watson</p>
                                         <p className="text-detail">Fashion Designer</p>
                                     </div>
                                 </div>
-                                <img src="/img/q1.png" alt="" className="hidden sm:block" />
+                                <img src="/src/assets/img/q1.png" alt="" className="hidden sm:block" />
                             </div>
                         </div>
                     </div>

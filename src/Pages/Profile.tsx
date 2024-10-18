@@ -168,7 +168,7 @@ function Profile() {
                                             </header>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3">
                                                 <MainCard discountPercentage={10} category="mens-shoes" stock={50} brand="" images={[""]} title="Shoes" price={250}
-                                                    thumbnail="/img/p1.png"
+                                                    thumbnail="/src/assets/img/p1.png"
                                                     rating={4.6} description="En Trend Ayakkabı, Çanta, Bijuteri ve Aksesuar Alışveriş Sitesi
                                                 Images may be subject to copyright. Learn More"  id={125} />
                                             </div>

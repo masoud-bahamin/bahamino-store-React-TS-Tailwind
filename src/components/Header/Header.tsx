@@ -27,7 +27,7 @@ function Header() {
             <header className="bg-page border-b">
                 <div className="container mx-auto px-4 sm:px-2 flex justify-between xl:gap-20 lg:gap-10 h-[84px] items-center">
                     <NavLink to={'/'}>
-                        <img src="/img/logo.png" className="w-32 sm:w-40" width={160} height={40} alt="" />
+                        <img src="/src/assets/img/logo.png" className="w-32 sm:w-40" width={160} height={40} alt="" />
                     </NavLink>
                     {/* show menu btn in mobil */}
                     <button className="lg:hidden" onClick={() => setIsShowMenu(true)}>

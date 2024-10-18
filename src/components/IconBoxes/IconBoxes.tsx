@@ -8,7 +8,7 @@ function IconBoxes() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
         </svg> */}
         <div>
-          <img src="/img/b1.png" alt="" />
+          <img src="/src/assets/img/b1.png" alt="" />
         </div>
         <div>
           <p className='font-semibold text-lg'>Discount</p>
@@ -17,7 +17,7 @@ function IconBoxes() {
       </div>
       <div className='flex items-center gap-4'>
         <div>
-          <img src="/img/b2.png" alt="" />
+          <img src="/src/assets/img/b2.png" alt="" />
         </div>
 
         <div>
@@ -27,7 +27,7 @@ function IconBoxes() {
       </div>
       <div className='flex items-center gap-4'>
         <div>
-          <img src="/img/b3.png" alt="" />
+          <img src="/src/assets/img/b3.png" alt="" />
         </div>
 
         <div>
@@ -37,7 +37,7 @@ function IconBoxes() {
       </div>
       <div className='flex items-center gap-4'>
         <div>
-          <img src="/img/b4.png" alt="" />
+          <img src="/src/assets/img/b4.png" alt="" />
         </div>
 
         <div>
