@@ -1,9 +1,7 @@
 import { useContext, useState, useEffect } from "react"
 import CartBox from "../components/Cards/CartBox"
-import Header from "../components/Header/Header"
 import { productContext } from "../Contexts/ProductContext"
 import { useNavigate } from "react-router-dom"
-import Footer from "../components/Footer/Footer"
 
 
 function Cart() {
