@@ -1,8 +1,6 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import Loader from "../components/Loader/Loader";
-import { productContext } from "../Contexts/ProductContext";
-import { useNavigate } from "react-router-dom"
 import { myAxios } from "../Sevises/Axios/confige";
 import { ProductType } from "../Types";
 import AddToBasket from "../components/Cards/AddToBasket";
@@ -25,12 +23,6 @@ function Product() {
   }
 
   useEffect(() => { getProduct() }, [productId])
-
-
-  const { addToBasket } = useContext(productContext)
-
-  const navigate = useNavigate()
-
 
   return (
     <div>
