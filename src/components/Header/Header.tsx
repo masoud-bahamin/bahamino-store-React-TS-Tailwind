@@ -14,7 +14,7 @@ function Header() {
 
     const basketContext = useContext(productContext)
 
-    const UserContext = useContext(userContext)
+    const {isLogin , userInfos} = useContext(userContext)
 
     useEffect(() => {
         setTotalPrice(basketContext.basket.reduce((prev, cur) => { return prev + cur.price }, 0))
@@ -74,45 +74,46 @@ function Header() {
                                 </svg>
                                 <span className="hidden sm:inline-block">Cart</span>
                                 <span className=" rounded-full text-center align-middle w-4 h-4 bg-primary text-white">{basketContext.basket?.length}</span>
-                                <div className="absolute top-9 z-20 -right-5 sm:right-0 md:right-10 w-80 sm:w-96 p-5 rounded text-primary hidden group-hover:block">
-                                    {
-                                        basketContext.basket?.length ? (
-                                            <>
-                                                {basketContext.basket.map(product => (
-                                                    <CartBox key={product.id} {...product} />
-                                                ))}
-                                            </>
-
-                                        ) : (
-                                            <div className="flex justify-center items-center h-32 text-center text-gray-600">
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="mx-auto w-16 h-16">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                                                    </svg>
-
-                                                    <p className="text-center">Your bag is empty</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    }
-                                    <div className="bg-white my-5 shadow-xl hover:shadow duration-200 rounded-xl flex justify-between p-4">
-                                        <div className="relative rounded-xl">
-                                            Total
-                                        </div>
-                                        <h5 className="text-primary font-medium text-sm">
-                                            ---
-                                        </h5>
-                                        <small className=" ">
-                                            ${totalPrice}
-                                        </small>
-                                    </div>
-                                    <button onClick={() => basketContext.removeAllProduct()}
-                                        className="px-4 py-2 rounded hover:bg-primary bg-white text-slate-900 border border-primary text-xs float-right">Clear Bag</button>
-                                </div>
                             </NavLink>
+                            <div className="absolute top-9 z-20 -right-5 sm:right-0 md:right-10 w-80 sm:w-96 p-5 bg-white border border-gray-100 rounded text-primary hidden group-hover:block">
+                                {
+                                    basketContext.basket?.length ? (
+                                        <>
+                                            {basketContext.basket.map(product => (
+                                                <CartBox key={product.id} {...product} />
+                                            ))}
+                                        </>
+
+                                    ) : (
+                                        <div className="flex justify-center items-center h-32 text-center text-gray-600">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="mx-auto w-16 h-16">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                                                </svg>
+
+                                                <p className="text-center">Your bag is empty</p>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                                <div className="bg-white my-2 border rounded-xl flex justify-between p-4">
+                                    <div className="relative rounded-xl">
+                                        Total
+                                    </div>
+                                    <h5 className="text-primary font-medium text-sm">
+                                        ---
+                                    </h5>
+                                    <small className=" ">
+                                        ${(totalPrice).toFixed(2)}
+                                    </small>
+                                </div>
+                                <button onClick={() => basketContext.removeAllProduct()}
+                                    className="px-4 py-2 rounded hover:bg-primary bg-white text-slate-900 border border-primary text-xs float-right">Clear Bag</button>
+                            </div>
+
                         </div>
                         <div className="hidden sm:block relative group rounded-full mb-1 md:mb-0" >
-                            <Link to={"/"} className=" w-11 h-11 bg-white rounded-lg text-bold hover:text-primary flex items-center justify-center gap-2 relative" >
+                            <Link to={isLogin ? "/profile" : "login"} className=" w-11 h-11 bg-white rounded-lg text-bold hover:text-primary flex items-center justify-center gap-2 relative" >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-[22px] h-[22px]">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                                 </svg>
@@ -120,7 +121,7 @@ function Header() {
                             </Link>
                         </div>
                         <div className="hidden sm:block relative group rounded-full mb-1 md:mb-0" >
-                            <Link to={"/profile"} className=" w-11 h-11 bg-white rounded-lg text-bold hover:text-primary flex items-center justify-center gap-2 relative" >
+                            <Link to={isLogin ? "/profile" : "login"} className=" w-11 h-11 bg-white rounded-lg text-bold hover:text-primary flex items-center justify-center gap-2 relative" >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-[22px] h-[22px]">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                 </svg>
@@ -151,16 +152,34 @@ function Header() {
                                     </NavLink>
                                 </li>
 
-                                <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_admin">
-                                    <a className="text-text hover:text-primary" href="#">
-                                        <span className=" font-medium ">About Us</span>
-                                    </a>
 
-                                </li>
                                 <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_admin">
                                     <NavLink to={"/shop"} className="text-text hover:text-primary" >
                                         <span className=" font-medium ">Shop</span>
                                     </NavLink>
+
+                                </li>
+
+                                {isLogin ? (
+                                    <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0 border" id="button_pm">
+                                        <NavLink to={"/profile"} className="text-text hover:text-primary flex gap-2" >
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                            </svg>
+                                            <span className="">{userInfos.username}</span>
+                                        </NavLink>
+                                    </li>
+                                ) : (
+                                    <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_pm">
+                                        <NavLink to={"/login"} className="text-text hover:text-primary" >
+                                            <span className="">Sign In</span>
+                                        </NavLink>
+                                    </li>
+                                )}
+                                <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_admin">
+                                    <a className="text-text hover:text-primary" href="#">
+                                        <span className=" font-medium ">About Us</span>
+                                    </a>
 
                                 </li>
                                 <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_moderate">
@@ -181,24 +200,6 @@ function Header() {
                                         </li>
                                     </ul>
                                 </li>
-                                {UserContext.isLogin ? (
-                                    <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0 border" id="button_pm">
-                                        <NavLink to={"/profile"} className="text-text hover:text-primary flex gap-2" >
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                            </svg>
-                                            <span className="">{UserContext.userInfos.username}</span>
-                                        </NavLink>
-                                    </li>
-                                ) : (
-                                    <li className="relative mx-1 px-4 py-2 group  rounded-full mb-1 md:mb-0" id="button_pm">
-                                        <NavLink to={"/register"} className="text-text hover:text-primary" >
-                                            <span className="">Sign Up</span>
-                                        </NavLink>
-                                    </li>
-                                )}
-
-
                             </ul>
                         </div>
                     </nav>

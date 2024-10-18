@@ -99,7 +99,6 @@ function Home() {
                 <div className="text-center mb-8">
                     <h3 className="semibold text-[32px] ">Our Products</h3>
                     <ul className='flex flex-wrap sm:flex-nowrap gap-2 items-center text-detail mx-auto w-fit'>
-                        <li onClick={() => filterHandler("all")} className="p-2 cursor-pointer text-bold">ALL</li>
                         <li onClick={() => filterHandler("new")} className="p-2 cursor-pointer hover:text-bold">NEWEST</li>
                         <li onClick={() => filterHandler("trend")} className="p-2 cursor-pointer hover:text-bold">TRENDING</li>
                         <li onClick={() => filterHandler("best")} className="p-2 cursor-pointer hover:text-bold">BEST PRICE</li>

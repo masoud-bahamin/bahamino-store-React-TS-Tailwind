@@ -1,8 +1,6 @@
 import { Formik, Field, Form } from "formik"
 import { UserSchema } from "../validations/validation"
-import { Link, useNavigate } from "react-router-dom"
-import { myAxios } from "../Sevises/Axios/confige"
-import Swal from "sweetalert2"
+import { Link } from "react-router-dom"
 import { userContext } from "../Contexts/userContext"
 import { useContext } from "react"
 
@@ -19,38 +17,8 @@ function Login() {
         password: ""
     }
 
-    const UserContext = useContext(userContext)
+    const {loginUser} = useContext(userContext)
 
-    const navigate = useNavigate()
-
-    const loginUser = async (username: string, password: String) => {
-        try {
-            const { data } = await myAxios.post("https://dummyjson.com/auth/login", { username, password })
-            console.log(data);
-
-            let dateTime = new Date()
-            dateTime.setTime(dateTime.getTime() + (7 * 24 * 60 * 60 * 1000))
-
-            document.cookie = "token =" + data.token + "; expires=" + dateTime.toUTCString() + "; path=/"
-
-            UserContext.setIsLogin(true)
-            UserContext.setUserInfos(data)
-            navigate("/")
-
-            Swal.fire({
-                icon: "success",
-                title: `${data.username} Login successfully`,
-            })
-        } catch (error) {
-            console.log(error);
-
-            Swal.fire({
-                icon: "error",
-                title: `Please try again`,
-                text: "Your username and password is incorrect"
-            })
-        }
-    }
     return (
         <div className="w-full overflow-x-hidden">
             <div className='w-full h-[156px] bg-page rounded-b-[48px] mx-auto overflow-hidden'>
@@ -94,8 +62,8 @@ function Login() {
                     </Formik>
                 </div>
             </div>
-            <div className="p-8 py-96">username: kminchelle <br />
-                password: 0lelplR </div>
+            <div className="container">username: emilys <br />
+                password: emilyspass </div>
         </div >
     )
 }

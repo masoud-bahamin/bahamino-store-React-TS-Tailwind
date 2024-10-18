@@ -5,6 +5,7 @@ import { productContext } from "../Contexts/ProductContext";
 import { useNavigate } from "react-router-dom"
 import { myAxios } from "../Sevises/Axios/confige";
 import { ProductType } from "../Types";
+import AddToBasket from "../components/Cards/AddToBasket";
 
 function Product() {
   const [product, setProduct] = useState<ProductType | null>(null)
@@ -102,11 +103,11 @@ function Product() {
                   <p className="text-gray-600 mb-5">{product.description}</p>
                   <p className="text-gray-600 text-xs mb-5">4 People looked at this product today</p>
                   <div className="flex gap-2 mb-5">
-                    <button onClick={() => {
-                      addToBasket(product)
-                      navigate('/cart')
-                    }}
-                      className="px-4 py-2 bg-primary hover:bg-bold text-white rounded">BUY</button>
+                    <AddToBasket product={product}>
+                      <button className="px-4 py-2 bg-primary hover:bg-bold text-white rounded">
+                        BUY
+                      </button>
+                    </AddToBasket>
                     <button className="px-4 py-2 rounded hover:bg-primary bg-white text-primary hover:text-white border border-primary">SEND MESSAGE</button>
                   </div>
                   <div className=" w-full max-w-xs mb-5">

@@ -20,7 +20,7 @@ function App() {
     <UserContextProvaider>
       <ProductContextProvider>
         <Header />
-        <div className='w-screen bg-white overflow-x-hidden'>
+        <div className='bg-white overflow-x-hidden'>
           {router}
         </div>
         <Footer />

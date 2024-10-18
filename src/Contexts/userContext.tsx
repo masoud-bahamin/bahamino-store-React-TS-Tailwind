@@ -1,9 +1,10 @@
 import { createContext, useState, useEffect } from "react"
 import { myAxios } from "../Sevises/Axios/confige";
 import { User } from "../Types";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
-const serverToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoia21pbmNoZWxsZSIsImVtYWlsIjoia21pbmNoZWxsZUBxcS5jb20iLCJmaXJzdE5hbWUiOiJKZWFubmUiLCJsYXN0TmFtZSI6IkhhbHZvcnNvbiIsImdlbmRlciI6ImZlbWFsZSIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvYXV0cXVpYXV0LnBuZyIsImlhdCI6MTY5NjI1NTYzNywiZXhwIjoxNjk2MjU5MjM3fQ.wPN4kCGWEemrOelRXrzs-By2v71mK8WplLDJcyuniIc"
 type UserInfo = {
     [properti in keyof User]?: User[properti]
 }
@@ -12,14 +13,14 @@ type UserContext = {
     isLogin: boolean;
     setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
     userInfos: UserInfo;
-    setUserInfos: React.Dispatch<React.SetStateAction<UserInfo>>;
+    loginUser: (u:string,p:string) => void;
     loading: boolean
 }
 export const userContext = createContext({} as UserContext)
 
 const getCooki = (name: string): boolean => {
     if (document.cookie) {
-        if (document.cookie.split("; " + name + "=")[1] === serverToken) return true
+        if (document.cookie.split("; " + name + "=")[0]) return true
     }
     return false
 }
@@ -34,12 +35,43 @@ const UserContextProvaider = ({ children }: { children: React.JSX.Element }) => 
     const getUserInfo = async () => {
         setLoading(true)
         if (getCooki("token")) {
-            let username = "kminchelle";
-            let password = "0lelplR";
+            let username = 'emilys';
+            let password = 'emilyspass';
             const { data } = await myAxios.post("https://dummyjson.com/auth/login", { username, password })
-            setUserInfos(data)
+            setUserInfos(data)           
         }
         setLoading(false)
+    }
+
+    const navigate = useNavigate()
+
+    const loginUser = async (username: string, password: String) => {
+        try {
+            const { data } = await myAxios.post("https://dummyjson.com/auth/login", { username, password })
+            console.log(data);
+
+            let dateTime = new Date()
+            dateTime.setTime(dateTime.getTime() + (24 * 60 * 60 * 1000))
+
+            document.cookie = "token =" + data.accessToken + "; expires=" + dateTime.toUTCString() + "; path=/"
+
+            setIsLogin(true)
+            setUserInfos(data)
+            navigate("/profile")
+
+            Swal.fire({
+                icon: "success",
+                title: `${data.username} Login successfully`,
+            })
+        } catch (error) {
+            console.log(error);
+
+            Swal.fire({
+                icon: "error",
+                title: `Please try again`,
+                text: "Your username and password is incorrect"
+            })
+        }
     }
 
     useEffect(() => {
@@ -48,7 +80,7 @@ const UserContextProvaider = ({ children }: { children: React.JSX.Element }) => 
 
     return (
         <userContext.Provider value={{
-            isLogin, setIsLogin, userInfos, setUserInfos , loading
+            isLogin, setIsLogin, userInfos, loginUser , loading
         }}>
             {children}
         </userContext.Provider>

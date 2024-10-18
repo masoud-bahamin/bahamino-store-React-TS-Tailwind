@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { ProductType } from "../../Types";
+import AddToBasket from "./AddToBasket";
 
 export const MainCard = ({ title, price, thumbnail, id }: ProductType) => {
     return (
@@ -36,6 +37,9 @@ export const MainCard = ({ title, price, thumbnail, id }: ProductType) => {
                     </p>
                 </div>
                 <div className="ml-auto">
+                    <AddToBasket  product={{ title, price, thumbnail, id ,
+                        brand:"", category:"fragrances", images:[],
+                        description : "", discountPercentage:10, rating:4.5, stock:10 }}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="44"
@@ -63,6 +67,7 @@ export const MainCard = ({ title, price, thumbnail, id }: ProductType) => {
                             clipRule="evenodd"
                         ></path>
                     </svg>
+                    </AddToBasket>
                 </div>
             </div>
         </div>

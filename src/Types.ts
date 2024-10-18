@@ -30,6 +30,7 @@ export interface ProductType {
     "lighting";
     thumbnail: string;
     images: string[];
+    count?:number
 }
 
 export type ProductVeiw = {

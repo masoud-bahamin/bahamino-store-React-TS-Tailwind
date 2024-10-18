@@ -174,26 +174,26 @@ const FormWizard = () => {
 
                                                 </div>
                                                 <Field
-                                                    className="p-2 px-3 rounded"
+                                                    className="p-2 px-3 rounded border"
                                                     type="text"
                                                     placeholder="Product Title*"
                                                     name="title"
                                                 />
                                                 <input
-                                                    className="p-2 px-3 rounded"
+                                                    className="p-2 px-3 rounded border"
                                                     type="text"
                                                     placeholder="Color"
                                                     name="fullname"
 
                                                 />
                                                 <Field
-                                                    className="p-2 px-3 rounded"
+                                                    className="p-2 px-3 rounded border"
                                                     type="text"
                                                     placeholder="Description"
                                                     name="description"
                                                 />
                                                 <Field
-                                                    className="p-2 px-3 rounded"
+                                                    className="p-2 px-3 rounded border"
                                                     type="number"
                                                     placeholder="price*"
                                                     name="price"
@@ -239,7 +239,7 @@ const FormWizard = () => {
                                                 </div>
 
                                                 <Field
-                                                    className="p-2 px-3 rounded"
+                                                    className="p-2 px-3 rounded border"
                                                     type="text"
                                                     placeholder="Brand"
                                                     name="brand"
@@ -257,13 +257,13 @@ const FormWizard = () => {
                                                     </h4>
                                                 </div>
                                                 <Field
-                                                    className="p-2 px-3 rounded"
+                                                    className="p-2 px-3 rounded border"
                                                     type="text"
                                                     placeholder="Phone Number"
                                                     name="phone"
                                                 />
                                                 <textarea
-                                                    className="p-2 px-3 rounded"
+                                                    className="p-2 px-3 rounded border"
                                                     placeholder="Write Address"
                                                     name="address"
                                                 />

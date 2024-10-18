@@ -13,7 +13,7 @@ function Cart() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        setTotalPrice(basketContext.basket.reduce((prev, cur) => { return prev + cur.price }, 0))
+        setTotalPrice(basketContext.basket.reduce((prev, cur) => { return prev + ((cur.count || 1) * cur.price) }, 0))
     }, [basketContext])
 
     return (
@@ -41,7 +41,7 @@ function Cart() {
                         )
                     }
 
-                    <div className="bg-white my-5 border border-gray-200 hover:shadow duration-200 rounded-xl flex justify-between p-4">
+                    <div className="bg-white my-2 border border-gray-200 hover:shadow duration-200 rounded-xl flex justify-between p-4">
                         <div className="relative rounded-xl">
                             Total
                         </div>
@@ -49,7 +49,7 @@ function Cart() {
                             ---
                         </h5>
                         <small className=" ">
-                            ${totalPrice}
+                            ${(totalPrice).toFixed(2) }
                         </small>
                     </div>
                     <button onClick={() => basketContext.removeAllProduct()}
@@ -62,7 +62,7 @@ function Cart() {
                         placeholder:font-normal border-2 ring-2 ring-transparent mb-4
                         border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300 
                        duration-300">
-                            Total : ${totalPrice}
+                            Total : ${(totalPrice).toFixed(2) }
                         </p>
                         <input type="text" className="px-3 py-2 md:py-3 md:px-4 block w-full md:w-[18rem]
                         xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:text-gray-600

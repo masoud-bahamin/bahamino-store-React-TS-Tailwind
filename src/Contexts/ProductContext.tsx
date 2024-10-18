@@ -23,8 +23,17 @@ function ProductContextProvider({ children }: productContextProp) {
     const addToBasket = (product: ProductType) => {
 
         if (basket.some(item => item.id === product.id)) {
+          const newArray =  basket.map(p => {
+                if(p.id === product.id){
+                    p.count = (p.count || 1) + 1
+                }
+                return p
+            })
+            setBasket(newArray)
+            localStorage.setItem("basket", JSON.stringify(newArray))
             return
         }
+        product.count = 1
         localStorage.setItem("basket", JSON.stringify([...basket, product]))
         setBasket(prev => [...prev, product])
 

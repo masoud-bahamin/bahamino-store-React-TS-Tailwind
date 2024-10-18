@@ -30,7 +30,7 @@ function Shop() {
         <div className="w-full overflow-x-hidden">
            
             {/* First baner */}
-            <AnimationDiv position="left">
+           
                 <div className="bg-[url(/img/baner.webp)] h-[70vh] py-12 bg-no-repeat bg-center bg-cover text-white">
                     <div className="container mx-auto px-4 sm:px-2">
                         <h2 className="text-3xl md:text-4xl mb-6">Drowing Room</h2>
@@ -46,7 +46,7 @@ function Shop() {
                         </div>
                     </div>
                 </div>
-            </AnimationDiv>
+           
             <div className="mt-20">
             <IconBoxes /></div>
             <Brands />
@@ -223,7 +223,7 @@ function Shop() {
                 ) : (
                     <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                         {data?.products?.map((product, i) => {
-                            if (i < 8) return <AnimationDiv className="mx-auto" position={i % 2 === 0 ? "left" : "right"} key={product.id}><MainCard   {...product} /></AnimationDiv>
+                         return <AnimationDiv className="mx-auto" position={i % 2 === 0 ? "left" : "right"} key={product.id}><MainCard   {...product} /></AnimationDiv>
                         })}
                     </div>
                 )}

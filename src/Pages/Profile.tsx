@@ -1,11 +1,23 @@
+import { useNavigate } from "react-router-dom"
+import { userContext } from "../Contexts/userContext"
 import { MainCard } from "../components/Cards/MainCard"
 import AddProductCart from "../components/Cards/addProductCart"
 import FormWizard from "../components/Wizard/Wizard"
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 
 function Profile() {
 
     const [isShowWizard, setIsShowWizard] = useState<boolean>(false)
+
+    const { isLogin } = useContext(userContext)
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (!isLogin) navigate("/login")
+    }, [])
+
+
     return (
         <div className="">
             <div
@@ -172,13 +184,13 @@ function Profile() {
                                         </div>
                                     </div>
                                     <div className="lg:col-span-8 col-span-12">
-                                    <h4 className="card-title">Your Products</h4>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-                                        <AddProductCart brand="Melli" title="Shoes first" price={100}
-                                            description="Çanta, Bijuteri ve Aksesuar Alışveriş Sitesi
+                                        <h4 className="card-title">Your Products</h4>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+                                            <AddProductCart brand="Melli" title="Shoes first" price={100}
+                                                description="Çanta, Bijuteri ve Aksesuar Alışveriş Sitesi
                                                 Images may be subject to copyright. Learn More"  phone="" imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPvVWssHt4W1hzTvQi7EBiOt-HBvQrbpVtLA&usqp=CAU" />
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
